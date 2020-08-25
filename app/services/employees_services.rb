@@ -7,7 +7,7 @@ class EmployeesServices
     end
 
     def self.register(position, first_name, last_name, username, password, password_confirmation)
-        user = User.new({
+        employee = Employee.new({
                             position: position,
                             first_name: first_name,
                             last_name: last_name,
