@@ -44,3 +44,67 @@ FOREIGN KEY ("dealership_id")
   [1m[36mActiveRecord::InternalMetadata Load (33.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2275652516797176195)[0m
   [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/employees/create" for ::1 at 2020-08-24 20:21:54 -0500
+  [1m[35m (108.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"employee"=>{"position"=>"Reception", "first_name"=>"Kenley", "last_name"=>"Maynard", "username"=>"kmaynard", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.0ms | Allocations: 3682)
+
+
+  
+NoMethodError (undefined method `register' for #<Class:0x00007fb518c55d08>):
+  
+app/controllers/api/v1/employees_controller.rb:11:in `create'
+Started POST "/api/v1/employees/create" for ::1 at 2020-08-24 20:32:43 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"lhodges", "first_name"=>"Lee", "last_name"=>"Hodges", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Fullstack Dev"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2990)
+
+
+  
+NoMethodError (undefined method `register' for #<Class:0x00007fb518c55d08>):
+  
+app/controllers/api/v1/employees_controller.rb:11:in `create'
+Started POST "/api/v1/employees/create" for ::1 at 2020-08-24 20:33:58 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"lhodges", "first_name"=>"Lee", "last_name"=>"Hodges", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Fullstack Dev"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2987)
+
+
+  
+NoMethodError (undefined method `register' for #<Class:0x00007fb518c55d08>):
+  
+app/controllers/api/v1/employees_controller.rb:11:in `create'
+Started POST "/api/v1/employees/create" for ::1 at 2020-08-24 20:35:31 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"lhodges", "first_name"=>"Lee", "last_name"=>"Hodges", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Fullstack Dev"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1900)
+
+
+  
+NameError (uninitialized constant Api::V1::EmployeesController::EmployeeServices
+Did you mean?  EmployeesServices):
+  
+app/controllers/api/v1/employees_controller.rb:11:in `create'
+Started POST "/api/v1/employees/create" for ::1 at 2020-08-24 20:36:09 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"lhodges", "first_name"=>"Lee", "last_name"=>"Hodges", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Fullstack Dev"}
+  [1m[36mEmployee Exists? (49.8ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+  [1m[36mCACHE Employee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[36mEmployee Create (626.4ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "username", "position", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Lee"], ["last_name", "Hodges"], ["username", "lhodges"], ["position", "Fullstack Dev"], ["password_digest", "$2a$12$mUkY5M9UixBU0Ow/lm0cyeXXpn5MAFfNGZe5iNBY.M/8e.B5vGzWu"], ["created_at", "2020-08-25 01:36:10.954660"], ["updated_at", "2020-08-25 01:36:10.954660"]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (898.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (82.3ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "27899cd62524f9bb23d544f8d7afd0713a51f7a6"], ["updated_at", "2020-08-25 01:36:12.793261"], ["id", 1]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 3065ms (Views: 12.3ms | ActiveRecord: 2076.0ms | Allocations: 13188)
+
+

@@ -8,7 +8,7 @@ class Api::V1::EmployeesController < ApplicationController
     end
 
     def create
-        @employee = Employee.register(params[:position], params[:first_name], params[:last_name], params[:username], params[:password], params[:password_confirmation])
+        @employee = EmployeesServices.register(params[:position], params[:first_name], params[:last_name], params[:username], params[:password], params[:password_confirmation])
         render json: { error: "There was a problem saving your user" }, status: :unprocessable_entity and return unless @employee
         render json: @employee.profile, status: :ok
     end
