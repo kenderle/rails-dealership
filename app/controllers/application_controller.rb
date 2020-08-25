@@ -1,4 +1,4 @@
-lass ApplicationController < ActionController::API
+class ApplicationController < ActionController::API
     include ActionController::HttpAuthentication::Token::ControllerMethods
     before_action :authenticate
     # Define our authenticate
@@ -6,7 +6,7 @@ lass ApplicationController < ActionController::API
         authenticate_token || render_unauthorized
     end
 
-    # Define our authenticate token
+    # Define our authenticate tokenra
 
     def authenticate_token
         authenticate_with_http_token do |token, options|
