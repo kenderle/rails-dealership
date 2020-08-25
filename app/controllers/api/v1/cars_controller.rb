@@ -1,4 +1,4 @@
-class API::V1::CarsController < ApplicationController
+class Api::V1::CarsController < ApplicationController
 
 
     before_action :set_dealership, only: [:show, :update, :destroy]
