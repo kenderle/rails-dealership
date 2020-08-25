@@ -1,7 +1,7 @@
 class DealershipsServices
 
 
-    def self.establish(title, phone, street1, street2, city, state, zip_code)
+    def self.register(title, phone, street1, street2, city, state, zip_code)
         dealership = Dealership.new({
                             title: title,
                             phone: phone,
