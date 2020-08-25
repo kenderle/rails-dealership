@@ -1,4 +1,4 @@
-class API::V1::DealershipsController < ApplicationController::API
+class API::V1::DealershipsController < ApplicationController
 
     before_action :set_dealership, only: [:show, :update, :destroy]
     skip_before_action :authenticate, only: [:index, :show]
