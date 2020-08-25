@@ -1,4 +1,4 @@
-class DealershipsService
+class CarsServices
 
 
     def self.register(make, model, year, color, description, price, dealership_id, cost, image)

@@ -1,4 +1,4 @@
-class DealershipsService
+class DealershipsServices
 
 
     def self.establish(title, phone, street1, street2, city, state, zip_code)
