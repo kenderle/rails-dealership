@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       namespace :employees do
         post :login
         post :create
+        patch :update
         get :me
         delete :logout
       end

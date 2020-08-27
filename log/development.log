@@ -117,3 +117,246 @@ Processing by Api::V1::EmployeesController#create as JSON
 Completed 422 Unprocessable Entity in 772ms (Views: 0.5ms | ActiveRecord: 130.3ms | Allocations: 10021)
 
 
+Started POST "/api/v1/employees/create" for ::1 at 2020-08-27 17:27:13 -0500
+  [1m[35m (15.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"mphelps", "first_name"=>"Michael", "last_name"=>"Phelps", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Assistant Manager"}
+  [1m[36mEmployee Exists? (28.9ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "mphelps"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+  [1m[36mCACHE Employee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "mphelps"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[36mEmployee Create (126.3ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "username", "position", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Michael"], ["last_name", "Phelps"], ["username", "mphelps"], ["position", "Assistant Manager"], ["password_digest", "$2a$12$VKPZlmWujE1tgy7GdOhVgeSymOnkeY55KDmTU9Tiqt4Udjlg4Jpn2"], ["created_at", "2020-08-27 22:27:15.799779"], ["updated_at", "2020-08-27 22:27:15.799779"]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (118.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (62.8ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "9fe67b99154c962f92e2eda9974242fb7fd94c3c"], ["updated_at", "2020-08-27 22:27:16.451297"], ["id", 2]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (56.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 2314ms (Views: 0.3ms | ActiveRecord: 1130.7ms | Allocations: 13138)
+
+
+Started POST "/api/v1/employees/login" for ::1 at 2020-08-27 17:31:43 -0500
+Processing by Api::V1::EmployeesController#login as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms | Allocations: 1872)
+
+
+  
+NameError (uninitialized constant Api::V1::EmployeesController::EmployeesService
+Did you mean?  EmployeesServices):
+  
+app/controllers/api/v1/employees_controller.rb:6:in `login'
+Started POST "/api/v1/employees/login" for ::1 at 2020-08-27 17:34:15 -0500
+Processing by Api::V1::EmployeesController#login as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:4:in `login'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (1.1ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "2f3afe17a5d701b0ccce179e601516fc9203b01f"], ["updated_at", "2020-08-27 22:34:17.115786"], ["id", 1]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 826ms (Views: 0.4ms | ActiveRecord: 217.8ms | Allocations: 8610)
+
+
+Started DELETE "/api/v1/employees/login" for ::1 at 2020-08-27 17:35:57 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/v1/employees/login"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/api/v1/employees/logout" for ::1 at 2020-08-27 17:37:35 -0500
+Processing by Api::V1::EmployeesController#logout as JSON
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "2b90edcffbe94dd0464dc9a21114094063a44455"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+ *** UNAUTHORIZED REQUEST: 'Bearer 2b90edcffbe94dd0464dc9a21114094063a44455' ***
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 203ms (Views: 0.4ms | ActiveRecord: 140.0ms | Allocations: 1789)
+
+
+Started DELETE "/api/v1/employees/logout" for ::1 at 2020-08-27 17:37:58 -0500
+Processing by Api::V1::EmployeesController#logout as JSON
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "2f3afe17a5d701b0ccce179e601516fc9203b01f"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:26:in `logout'
+  [1m[36mEmployee Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 AND "employees"."id" != $2 LIMIT $3[0m  [["username", "lhodges"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:26:in `logout'
+  [1m[36mEmployee Update (8.5ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", nil], ["updated_at", "2020-08-27 22:37:58.948816"], ["id", 1]]
+  ↳ app/services/employees_services.rb:26:in `logout'
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:26:in `logout'
+Completed 200 OK in 108ms (Views: 0.2ms | ActiveRecord: 24.9ms | Allocations: 8706)
+
+
+Started POST "/api/v1/employees/login" for ::1 at 2020-08-27 17:38:22 -0500
+Processing by Api::V1::EmployeesController#login as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]"}
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:4:in `login'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (2.1ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "f98c7b062001fe276db5ec37d4d505c21b9a4274"], ["updated_at", "2020-08-27 22:38:22.665565"], ["id", 1]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 491ms (Views: 0.3ms | ActiveRecord: 5.7ms | Allocations: 4536)
+
+
+Started POST "/api/v1/employees/me" for ::1 at 2020-08-27 17:39:08 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/employees/me"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/employees/me" for ::1 at 2020-08-27 17:39:18 -0500
+Processing by Api::V1::EmployeesController#me as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "2f3afe17a5d701b0ccce179e601516fc9203b01f"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+ *** UNAUTHORIZED REQUEST: 'Bearer 2f3afe17a5d701b0ccce179e601516fc9203b01f' ***
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 704)
+
+
+Started GET "/api/v1/employees/me" for ::1 at 2020-08-27 17:39:52 -0500
+Processing by Api::V1::EmployeesController#me as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "f98c7b062001fe276db5ec37d4d505c21b9a4274"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 768)
+
+
+Started PATCH "/api/v1/employees/update" for ::1 at 2020-08-27 18:06:51 -0500
+Processing by Api::V1::EmployeesController#update as JSON
+  Parameters: {"username"=>"mscott", "last_name"=>"Scott", "position"=>"Regional Manager"}
+ *** UNAUTHORIZED REQUEST: '' ***
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 148)
+
+
+Started PATCH "/api/v1/employees/update?id=2" for ::1 at 2020-08-27 18:08:00 -0500
+Processing by Api::V1::EmployeesController#update as JSON
+  Parameters: {"username"=>"mscott", "last_name"=>"Scott", "position"=>"Regional Manager", "id"=>"2"}
+ *** UNAUTHORIZED REQUEST: '' ***
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 121)
+
+
+Started PATCH "/api/v1/employees/update?id=2" for ::1 at 2020-08-27 18:15:20 -0500
+Processing by Api::V1::EmployeesController#update as JSON
+  Parameters: {"username"=>"mscott", "last_name"=>"Scott", "position"=>"Regional Manager", "id"=>"2"}
+ *** UNAUTHORIZED REQUEST: '' ***
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 121)
+
+
+Started PATCH "/api/v1/employees/update?id=2" for ::1 at 2020-08-27 18:15:39 -0500
+Processing by Api::V1::EmployeesController#update as JSON
+  Parameters: {"username"=>"mscott", "last_name"=>"Scott", "position"=>"Regional Manager", "id"=>"2"}
+  [1m[36mEmployee Load (43.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "f98c7b062001fe276db5ec37d4d505c21b9a4274"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 400 Bad Request in 270ms (ActiveRecord: 44.3ms | Allocations: 7300)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: employee):
+  
+app/controllers/api/v1/employees_controller.rb:36:in `employee_params'
+app/controllers/api/v1/employees_controller.rb:17:in `update'
+Started PATCH "/api/v1/employees/update?id=2" for ::1 at 2020-08-27 18:36:18 -0500
+  [1m[35m (11.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EmployeesController#update as JSON
+  Parameters: {"username"=>"mscott", "last_name"=>"Scott", "position"=>"Regional Manager", "id"=>"2"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 190)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: employee):
+  
+app/controllers/api/v1/employees_controller.rb:36:in `employee_params'
+app/controllers/api/v1/employees_controller.rb:17:in `update'
+Started PATCH "/api/v1/employees/update?id=2" for 127.0.0.1 at 2020-08-27 18:40:38 -0500
+Processing by Api::V1::EmployeesController#update as JSON
+  Parameters: {"username"=>"mscott", "last_name"=>"Scott", "position"=>"Regional Manager", "id"=>"2"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 157)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: employee):
+  
+app/controllers/api/v1/employees_controller.rb:40:in `employee_params'
+app/controllers/api/v1/employees_controller.rb:17:in `update'
+Started PATCH "/api/v1/employees/update?id=2" for ::1 at 2020-08-27 18:41:13 -0500
+Processing by Api::V1::EmployeesController#update as JSON
+  Parameters: {"username"=>"mscott", "last_name"=>"Scott", "position"=>"Regional Manager", "id"=>"2"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 119)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: employee):
+  
+app/controllers/api/v1/employees_controller.rb:40:in `employee_params'
+app/controllers/api/v1/employees_controller.rb:17:in `update'
+Started PATCH "/api/v1/employees/update?id=2" for ::1 at 2020-08-27 18:45:43 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EmployeesController#update as JSON
+  Parameters: {"username"=>"mscott", "last_name"=>"Scott", "position"=>"Regional Manager", "id"=>"2"}
+  [1m[36mEmployee Load (24.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "f98c7b062001fe276db5ec37d4d505c21b9a4274"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/employees_controller.rb:37:in `set_employee'
+Completed 400 Bad Request in 1112ms (ActiveRecord: 1036.3ms | Allocations: 7690)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: employee):
+  
+app/controllers/api/v1/employees_controller.rb:41:in `employee_params'
+app/controllers/api/v1/employees_controller.rb:18:in `update'
