@@ -108,3 +108,12 @@ Processing by Api::V1::EmployeesController#create as JSON
 Completed 200 OK in 3065ms (Views: 12.3ms | ActiveRecord: 2076.0ms | Allocations: 13188)
 
 
+Started POST "/api/v1/employees/create" for ::1 at 2020-08-26 21:00:03 -0500
+  [1m[35m (54.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"lhodges", "first_name"=>"Lee", "last_name"=>"Hodges", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Fullstack Dev"}
+  [1m[36mEmployee Exists? (17.0ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+Completed 422 Unprocessable Entity in 772ms (Views: 0.5ms | ActiveRecord: 130.3ms | Allocations: 10021)
+
+
