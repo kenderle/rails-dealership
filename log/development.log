@@ -360,3 +360,541 @@ ActionController::ParameterMissing (param is missing or the value is empty: empl
   
 app/controllers/api/v1/employees_controller.rb:41:in `employee_params'
 app/controllers/api/v1/employees_controller.rb:18:in `update'
+Started GET "/" for 127.0.0.1 at 2020-09-03 20:16:56 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "dealership_api_development" does not exist
+):
+  
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-09-03 20:16:56 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "dealership_api_development" does not exist
+):
+  
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-09-04 20:23:46 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "dealership_api_development" does not exist
+):
+  
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2020-09-04 20:23:46 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "dealership_api_development" does not exist
+):
+  
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (208.2ms)[0m  [1m[35mCREATE DATABASE "dealership_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (99.8ms)[0m  [1m[35mCREATE DATABASE "dealership_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2275652516797176195)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEmployees (20200823012906)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "employees" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "username" character varying, "position" character varying, "password_digest" character varying, "token" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200823012906"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDealerships (20200824222928)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "dealerships" ("id" bigserial primary key, "title" character varying, "phone" integer, "street1" character varying, "street2" character varying, "city" character varying, "state" character varying, "zip_code" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200824222928"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCars (20200824235927)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "cars" ("id" bigserial primary key, "make" character varying, "model" character varying, "year" integer, "color" character varying, "description" text, "price" integer, "dealership_id" bigint NOT NULL, "cost" integer, "image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_d02ac76bc5"
+FOREIGN KEY ("dealership_id")
+  REFERENCES "dealerships" ("id")
+)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_cars_on_dealership_id" ON "cars"  ("dealership_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200824235927"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-05 01:24:38.597522"], ["updated_at", "2020-09-05 01:24:38.597522"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2275652516797176195)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-09-04 20:24:46 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kee/.rvm/gems/ruby-2.7.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kee/.rvm/gems/ruby-2.7.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.3ms | Allocations: 188)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 1094)
+
+
+Started GET "/" for ::1 at 2020-09-04 20:27:56 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kee/.rvm/gems/ruby-2.7.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kee/.rvm/gems/ruby-2.7.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 295)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 1538)
+
+
+Started POST "/api/v1/employees/create" for ::1 at 2020-09-04 20:32:11 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"mphelps", "first_name"=>"Michael", "last_name"=>"Phelps", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Assistant Manager"}
+  [1m[36mEmployee Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "mphelps"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+  [1m[36mCACHE Employee Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "mphelps"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[36mEmployee Create (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "username", "position", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Michael"], ["last_name", "Phelps"], ["username", "mphelps"], ["position", "Assistant Manager"], ["password_digest", "$2a$12$ptEnno/xxceCSSAOyuEEF.GwkCxE2XUiRQOCGhHe4OfLE5io/h1nK"], ["created_at", "2020-09-05 01:32:11.697387"], ["updated_at", "2020-09-05 01:32:11.697387"]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (0.5ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "1eb385bcf909e3a2a059f6312c93baaa4780dac3"], ["updated_at", "2020-09-05 01:32:11.705060"], ["id", 1]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 306ms (Views: 0.5ms | ActiveRecord: 9.9ms | Allocations: 13257)
+
+
+Started GET "/api/v1/employees/me?id=1" for ::1 at 2020-09-04 20:32:36 -0500
+Processing by Api::V1::EmployeesController#me as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "f98c7b062001fe276db5ec37d4d505c21b9a4274"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+ *** UNAUTHORIZED REQUEST: 'Bearer f98c7b062001fe276db5ec37d4d505c21b9a4274' ***
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 896)
+
+
+Started GET "/api/v1/employees/me?id=1" for ::1 at 2020-09-04 20:32:57 -0500
+Processing by Api::V1::EmployeesController#me as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "1eb385bcf909e3a2a059f6312c93baaa4780dac3"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 800)
+
+
+Started POST "/api/v1/employees/login" for ::1 at 2020-09-04 20:33:25 -0500
+Processing by Api::V1::EmployeesController#login as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:4:in `login'
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 792)
+
+
+Started POST "/api/v1/employees/create" for ::1 at 2020-09-04 20:33:56 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"lhodges", "first_name"=>"Lee", "last_name"=>"Hodges", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"IT"}
+  [1m[36mEmployee Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+  [1m[36mCACHE Employee Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[36mEmployee Create (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "username", "position", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Lee"], ["last_name", "Hodges"], ["username", "lhodges"], ["position", "IT"], ["password_digest", "$2a$12$rblMVjYVaJYiFdFXXcnO6.aHyjc7cRiJWZYnmAAlcuS/OQyZn2TMm"], ["created_at", "2020-09-05 01:33:57.237540"], ["updated_at", "2020-09-05 01:33:57.237540"]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (0.4ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "eaf87169b73da9a0c4828fd6cfe81c7c0241dd80"], ["updated_at", "2020-09-05 01:33:57.242464"], ["id", 2]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 280ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 6493)
+
+
+Started POST "/api/v1/employees/create" for ::1 at 2020-09-04 20:34:26 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"bgentry", "first_name"=>"Brittany", "last_name"=>"Gentry", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Reception"}
+  [1m[36mEmployee Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "bgentry"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+  [1m[36mCACHE Employee Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "bgentry"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "username", "position", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Brittany"], ["last_name", "Gentry"], ["username", "bgentry"], ["position", "Reception"], ["password_digest", "$2a$12$ME0hvMlXu.4RzDq557BOs.0O7IsJatCrk6fY2xad9Qt9fOmdWh.jq"], ["created_at", "2020-09-05 01:34:27.147939"], ["updated_at", "2020-09-05 01:34:27.147939"]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (0.5ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "0928f71bf1c31babb2af85ff8cf3b4acc0224c1b"], ["updated_at", "2020-09-05 01:34:27.151743"], ["id", 3]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 283ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 6476)
+
+
+Started POST "/api/v1/employees/create" for ::1 at 2020-09-04 20:35:00 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"mholland", "first_name"=>"Matthew", "last_name"=>"Holland", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Sales"}
+  [1m[36mEmployee Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "mholland"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+  [1m[36mCACHE Employee Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "mholland"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "username", "position", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Matthew"], ["last_name", "Holland"], ["username", "mholland"], ["position", "Sales"], ["password_digest", "$2a$12$gYfW.VyzS4fCt88mDV2Bn.SD2WLWD3sXkpOtfifHbdcY88pkAcBm."], ["created_at", "2020-09-05 01:35:00.468537"], ["updated_at", "2020-09-05 01:35:00.468537"]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (0.5ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "46c7432d5434365ee0fa5bc25973ccab9e5bf3ce"], ["updated_at", "2020-09-05 01:35:00.473700"], ["id", 4]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 281ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 6476)
+
+
+Started POST "/api/v1/employees/create" for ::1 at 2020-09-04 20:35:19 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"gturner", "first_name"=>"Greg", "last_name"=>"Turner", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Sales"}
+  [1m[36mEmployee Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "gturner"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+  [1m[36mCACHE Employee Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "gturner"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[36mEmployee Create (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "username", "position", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Greg"], ["last_name", "Turner"], ["username", "gturner"], ["position", "Sales"], ["password_digest", "$2a$12$8wU3Mr6TX1A4iHkvbzbrne39ZHrxvdD3Jo6sZqMF.kJvt7i7116Fi"], ["created_at", "2020-09-05 01:35:20.234192"], ["updated_at", "2020-09-05 01:35:20.234192"]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (0.4ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "32a6e209474cb5790074e2d319f20a6f206fd6bd"], ["updated_at", "2020-09-05 01:35:20.241034"], ["id", 5]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 285ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 6469)
+
+
+Started POST "/api/v1/employees/create" for ::1 at 2020-09-04 20:36:17 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"lrhondersa", "first_name"=>"Leila", "last_name"=>"Rhodersa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Sales"}
+  [1m[36mEmployee Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lrhondersa"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+  [1m[36mCACHE Employee Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lrhondersa"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[36mEmployee Create (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "username", "position", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Leila"], ["last_name", "Rhodersa"], ["username", "lrhondersa"], ["position", "Sales"], ["password_digest", "$2a$12$5VQh276mQ5lNIUk0.W/bV.esy1.d8OZ/kO3KGFsLz7zdu9ZbvlW/i"], ["created_at", "2020-09-05 01:36:17.951420"], ["updated_at", "2020-09-05 01:36:17.951420"]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (0.4ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "5b29c3be750c2be3ec83d7f373388a3914deae59"], ["updated_at", "2020-09-05 01:36:17.960569"], ["id", 6]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 290ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 6476)
+
+
+Started POST "/api/v1/employees/create" for ::1 at 2020-09-04 20:36:42 -0500
+Processing by Api::V1::EmployeesController#create as JSON
+  Parameters: {"username"=>"mfrench", "first_name"=>"Mina", "last_name"=>"French", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "position"=>"Reception"}
+  [1m[36mEmployee Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "mfrench"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:19:in `register'
+  [1m[36mCACHE Employee Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "mfrench"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[36mEmployee Create (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "username", "position", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Mina"], ["last_name", "French"], ["username", "mfrench"], ["position", "Reception"], ["password_digest", "$2a$12$g2dktoANHEC99xr1VUM3veZq96pgjRpaDtr3oGAfqHLzY5gVPRV7."], ["created_at", "2020-09-05 01:36:42.596795"], ["updated_at", "2020-09-05 01:36:42.596795"]]
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/employees_services.rb:20:in `register'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (0.4ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "eb83c77e8cc54bad48d3fb0d662a0d185e94a6df"], ["updated_at", "2020-09-05 01:36:42.604368"], ["id", 7]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 284ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 6469)
+
+
+Started POST "/api/v1/employees/login" for ::1 at 2020-09-04 20:37:02 -0500
+Processing by Api::V1::EmployeesController#login as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:4:in `login'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (0.4ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "1a99a54162b062d00ddf5df687ee79adfaa84a83"], ["updated_at", "2020-09-05 01:37:02.622638"], ["id", 2]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 271ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2994)
+
+
+Started GET "/api/v1/employees/me?id=1" for ::1 at 2020-09-04 20:37:12 -0500
+Processing by Api::V1::EmployeesController#me as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "1a99a54162b062d00ddf5df687ee79adfaa84a83"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 774)
+
+
+Started POST "/api/v1/dealerships/create" for ::1 at 2020-09-04 20:42:45 -0500
+Processing by Api::V1::DealershipsController#create as JSON
+  Parameters: {"title"=>"Cape Girardeau Mount Auburn Location", "phone"=>"5733312649", "street1"=>"1439 N Mount Auburn Road", "city"=>"Cape Girardeau", "state"=>"MO", "zip_code"=>"63701"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "1a99a54162b062d00ddf5df687ee79adfaa84a83"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.3ms | Allocations: 957)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: dealership):
+  
+app/controllers/api/v1/dealerships_controller.rb:58:in `dealership_params'
+app/controllers/api/v1/dealerships_controller.rb:21:in `create'
+Started POST "/api/v1/dealerships/create" for ::1 at 2020-09-04 20:43:33 -0500
+Processing by Api::V1::DealershipsController#create as JSON
+  Parameters: {"title"=>"Cape Girardeau Mount Auburn Location", "phone"=>"5733312649", "street1"=>"1439 N Mount Auburn Road", "street2"=>"", "city"=>"Cape Girardeau", "state"=>"MO", "zip_code"=>"63701"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "1a99a54162b062d00ddf5df687ee79adfaa84a83"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.3ms | Allocations: 726)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: dealership):
+  
+app/controllers/api/v1/dealerships_controller.rb:58:in `dealership_params'
+app/controllers/api/v1/dealerships_controller.rb:21:in `create'
+Started POST "/api/v1/dealerships/create" for ::1 at 2020-09-07 13:25:35 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::DealershipsController#create as JSON
+  Parameters: {"title"=>"Cape Girardeau Mount Auburn Location", "phone"=>"5733312649", "street1"=>"1439 N Mount Auburn Road", "street2"=>"", "city"=>"Cape Girardeau", "state"=>"MO", "zip_code"=>"63701"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "1a99a54162b062d00ddf5df687ee79adfaa84a83"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 400 Bad Request in 25ms (ActiveRecord: 6.0ms | Allocations: 7174)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: dealership):
+  
+app/controllers/api/v1/dealerships_controller.rb:58:in `dealership_params'
+app/controllers/api/v1/dealerships_controller.rb:21:in `create'
+Started POST "/api/v1/employees/login" for ::1 at 2020-09-07 13:26:50 -0500
+Processing by Api::V1::EmployeesController#login as JSON
+  Parameters: {"username"=>"lhodges", "password"=>"[FILTERED]"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."username" = $1 LIMIT $2[0m  [["username", "lhodges"], ["LIMIT", 1]]
+  ↳ app/services/employees_services.rb:4:in `login'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[36mEmployee Update (0.5ms)[0m  [1m[33mUPDATE "employees" SET "token" = $1, "updated_at" = $2 WHERE "employees"."id" = $3[0m  [["token", "7fda1a4facc8ce8e9a36d21f1d161255bcfbdfd6"], ["updated_at", "2020-09-07 18:26:50.603633"], ["id", 2]]
+  ↳ app/models/employee.rb:17:in `generate_token!'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/employee.rb:17:in `generate_token!'
+Completed 200 OK in 277ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 3486)
+
+
+Started POST "/api/v1/dealerships/create" for ::1 at 2020-09-07 13:27:03 -0500
+Processing by Api::V1::DealershipsController#create as JSON
+  Parameters: {"title"=>"Cape Girardeau Mount Auburn Location", "phone"=>"5733312649", "street1"=>"1439 N Mount Auburn Road", "street2"=>"", "city"=>"Cape Girardeau", "state"=>"MO", "zip_code"=>"63701"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "7fda1a4facc8ce8e9a36d21f1d161255bcfbdfd6"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.3ms | Allocations: 744)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: dealership):
+  
+app/controllers/api/v1/dealerships_controller.rb:58:in `dealership_params'
+app/controllers/api/v1/dealerships_controller.rb:21:in `create'
+Started POST "/api/v1/dealerships/create?title=Cape%20Girardeau%20Mount%20Auburn&phone=5733312469&street1=1323%20S%20Mount%20Auburn%20Road&street2&city=Cape%20Girardeau&state=Missouri&zip_code=63701" for ::1 at 2020-09-07 13:30:06 -0500
+Processing by Api::V1::DealershipsController#create as JSON
+  Parameters: {"title"=>"Cape Girardeau Mount Auburn", "phone"=>"5733312469", "street1"=>"1323 S Mount Auburn Road", "street2"=>nil, "city"=>"Cape Girardeau", "state"=>"Missouri", "zip_code"=>"63701"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "7fda1a4facc8ce8e9a36d21f1d161255bcfbdfd6"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.3ms | Allocations: 747)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: dealership):
+  
+app/controllers/api/v1/dealerships_controller.rb:58:in `dealership_params'
+app/controllers/api/v1/dealerships_controller.rb:21:in `create'
+Started POST "/api/v1/dealerships/create?title=Cape%20Girardeau%20Mount%20Auburn&phone=5733312469&street1=1323%20S%20Mount%20Auburn%20Road&street2&city=Cape%20Girardeau&state=Missouri&zip_code=63701" for ::1 at 2020-09-07 13:54:48 -0500
+Processing by Api::V1::DealershipsController#create as JSON
+  Parameters: {"title"=>"Cape Girardeau Mount Auburn", "phone"=>"5733312469", "street1"=>"1323 S Mount Auburn Road", "street2"=>nil, "city"=>"Cape Girardeau", "state"=>"Missouri", "zip_code"=>"63701"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "7fda1a4facc8ce8e9a36d21f1d161255bcfbdfd6"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 400 Bad Request in 13ms (ActiveRecord: 0.6ms | Allocations: 6226)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: dealership):
+  
+app/controllers/api/v1/dealerships_controller.rb:58:in `dealership_params'
+app/controllers/api/v1/dealerships_controller.rb:21:in `create'
+Started POST "/api/v1/dealerships/create?title=Cape%20Girardeau%20Mount%20Auburn&phone=5733312469&street1=1323%20S%20Mount%20Auburn%20Road&street2&city=Cape%20Girardeau&state=Missouri&zip_code=63701" for ::1 at 2020-09-07 13:56:35 -0500
+Processing by Api::V1::DealershipsController#create as JSON
+  Parameters: {"title"=>"Cape Girardeau Mount Auburn", "phone"=>"5733312469", "street1"=>"1323 S Mount Auburn Road", "street2"=>nil, "city"=>"Cape Girardeau", "state"=>"Missouri", "zip_code"=>"63701"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."token" = $1 LIMIT $2[0m  [["token", "7fda1a4facc8ce8e9a36d21f1d161255bcfbdfd6"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `block in authenticate_token'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.5ms | Allocations: 726)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: dealership):
+  
+app/controllers/api/v1/dealerships_controller.rb:58:in `dealership_params'
+app/controllers/api/v1/dealerships_controller.rb:21:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE DATABASE "dealership_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "dealership_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2275652516797176195)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2275652516797176195)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

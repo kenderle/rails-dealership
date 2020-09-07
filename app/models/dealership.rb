@@ -1,5 +1,10 @@
 class Dealership < ApplicationRecord
 
+    def initialize(attributes=nil)
+        attr_with_defaults = {:state => "Missouri"}.merge(attributes)
+        super(attr_with_defaults)
+      end
+
     def profile
         {
             id: id,
